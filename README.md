@@ -6,25 +6,37 @@ This repository contains a PowerShell script which provides a GUI to read/write 
 ## References
 Microsoft has described all the dsHeuristic flags in the Open Specifications document **MS-ADTS Active Directory Technical Specification**, you can find the list in the following section [6.1.1.2.4.1.2 dSHeuristics](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-adts/e5899be4-862e-496f-9a38-33950617d2c5).
 
-
-
 ## Motivation
-Das editieren einer zeichenkette die aus maximal 31 nullen oder anderen werten besteht wie z.B. 00100000010000000001000000000111 ist doch sehr fehleranfällig, dazu komt das es sehr unübersichtlich ist, man meistens die namen der flags und die erlaubten werte sowieso nicht auswendig weiß und man darauf achten muss das die control flags an den richtigen stellen gesetzt sind. Um also die aufgabe etwas zu erleichtern hat der autor diese GUI erstellt
-die alle Flags mit namen, beschreibung und den erlaubten werten anzeigt.
+Editing a string that consists of a maximum of 31 zeros or other values, like 00100000010000000001000000000111, is really confusing and prone to mistakes. On top of that, you usually don’t remember the names of the different flags, their functions and the allowed values by heart, and you also have to make sure that the three control flags are set or not set at the right positions. So, to make the task a bit easier, the author developed this GUI that makes all the flags available with names, descriptions, and allowed values.
 
-Link zu Microft docu
 
-MS-ADTS Active Directory Technical Specification
 Berechtigung haben: Domain Admins, Enterprise Admins
 
-.\SetDsHeuristic.ps1 -Decode '0210000'
+.\SetDsHeuristic.ps1 -Decode '0110000'
 Old dsHeuristic Attribute: 0210000
 New dsHeuristic Attribute: 001
 
 ## Installation and Use
-No installation needed, download both .ps1 files to a directory and run the SetDsHeuristic.ps1 script.
+No installation needed, download both files, the .ps1 and the .lib.ps1 to the same directory and run the SetDsHeuristic.ps1 script. You could use the tool in two different ways. Make the dsHeuristic string available to the tool yourself with the Decode parameter:
 
-## Description
+````PowerShell
+.\SetDsHeuristic.ps1 -Decode '0110000'
+````
+This approach makes sense if you just want to decode a dsHeuristic value to see which flags are activated or deactivated, but also if you can't or don't want to change the value directly in the Domain Service. The tool returns the old and the new value for comparison or further processing:
+
+````PowerShell
+Old dsHeuristic Attribute: 0110000
+New dsHeuristic Attribute: 010002000111
+````
+When starting without parameters, it tries to determine the dsHeuristics attribute directly from the Domain Service, for which a domain account is needed. If the changes should also be written, the account must be a member of the Domain Admins or Enterprise Admins group. In both cases, the tool starts with a welcome panel where a warning notice and a disclaimer can be seen.
+
+
+
+
+
+
+
+
 
 
 <img style="display: block; margin: 0 auto" width="408" height="482" alt="DynamicGroup_Example" src="https://github.com/user-attachments/assets/75bdef34-27b3-4b79-93eb-9a06d14fcc2c" />
