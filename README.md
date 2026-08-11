@@ -23,7 +23,7 @@ New dsHeuristic Attribute: 010002000111
 ````
 When starting without parameters, it tries to determine the dsHeuristics attribute directly from the Domain Service, for which a domain account is needed. If the changes should also be written, the account must be a member of the Domain Admins or Enterprise Admins group. In both cases, the tool starts with a welcome panel where a warning notice and a disclaimer can be seen.
 <p align="center" width="100%">
-<img width="80%" height="703" alt="Screen" src="https://github.com/user-attachments/assets/07101c3c-0f8a-4a44-b110-2059221157c2" />
+<img width="587" height="703" alt="Screen" src="https://github.com/user-attachments/assets/07101c3c-0f8a-4a44-b110-2059221157c2" />
 </p>
 By pressing the continue button, you confirm that you have read and understood the warning and switch to the editable section. At the very top is the display of the CURRENT value, which was either passed via the Decode parameter or read from the Domain service, and the UPDATED value, which shows the changes that have been made in the Flags section. In this section you could find all flags with the original name, a short description and the possibility to change it value.
 </p>
