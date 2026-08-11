@@ -31,6 +31,9 @@ New dsHeuristic Attribute: 010002000111
 When starting without parameters, it tries to determine the dsHeuristics attribute directly from the Domain Service, for which a domain account is needed. If the changes should also be written, the account must be a member of the Domain Admins or Enterprise Admins group. In both cases, the tool starts with a welcome panel where a warning notice and a disclaimer can be seen.
 
 
+<img width="586" height="700" alt="Changes and Errors" src="https://github.com/user-attachments/assets/479a776a-4bed-45b6-9f0f-9c2bb7d52147" />
+<img width="580" height="705" alt="FlagScreen" src="https://github.com/user-attachments/assets/177286ff-a40b-4307-a0bc-d037cca39707" />
+<img width="587" height="703" alt="StartScreen" src="https://github.com/user-attachments/assets/07101c3c-0f8a-4a44-b110-2059221157c2" />
 
 
 
