@@ -25,18 +25,16 @@
     UpdateDataGrid
 
 .EXTERNALMODULEDEPENDENCIES
-    {<FunctionName>,<ModuleName>}
 
 .REQUIREDSCRIPTS SetDsHeuristic.ps1
 
 .REQUIREDBINARIES
-    {<FunctionName>,<BinaryName>}        
 
 .DESCRIPTION
     This library contains private functions for the script defined in REQUIREDSCRIPTS.
 
 .RELEASENOTES 
-    {<YYYY-MM-DD>,<FunctionName>,<AuthorID>,<ChangeDescription>}
+    2026-08-11,All functions,KrizKodez,Initial release
 
 #>
 
@@ -135,7 +133,8 @@ $UpdateControlFlags = {
             $this."20" = "0"
             $this."10" = "0"
         }
-    }
+    }# End of switch between flag numbers.
+
 }# End of scriptblock UpdateControlFlags.
 
 
@@ -154,10 +153,10 @@ function ConvertToHeuristicObject
 
 .OUTPUTS
     System.Management.Automation.PSCustomObject
-    Object which contains all DsHeuristics flags as a property.
+    Object which contains all dsHeuristics flags as a property.
 
 .PARAMETER Heuristic
-    The dsHeuristics attribute value which is a string.
+    The dsHeuristics attribute value.
 
 .PARAMETER Type
     Define if the object contains the CURRENT flags or the UPDATED flags.
@@ -263,7 +262,7 @@ function GetGuiWindow
 {
 <#
 .DESCRIPTION
-    Get the GUI Window.
+    Initialize the WPF-GUI main window.
     
 .INPUTS
     None

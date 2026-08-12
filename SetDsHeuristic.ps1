@@ -32,7 +32,7 @@
     The script provides a GUI to comfortably manipulate all Active Directory dsHeuristics flags.
 
 .RELEASENOTES
-    {<YYYY-MM-DD>,<SemVersion>,<AuthorID>,<ChangeDescription>}
+    2026-08-11,0.1.0,KrizKodez,Initial release
 
 #>
 
@@ -44,7 +44,8 @@
     The script provides a GUI to comfortably manipulate all Active Directory dsHeuristics flags.
 
 .INPUTS
-    None
+    System.String
+    A string containing a dsHeuristics attribute value.
     [You cannot pipe input to this function.]
 
 .OUTPUTS
@@ -54,10 +55,10 @@
     With the -Decode parameter a 
 
 .LINK
-    https://github.com/activedirectory_dsheuristic_tool
+    https://github.com/KrizKodez/DSHeuristics
 
 .PARAMETER Decode
-    A dsHeuristics flags string to be decoded.
+    A dsHeuristics attribute string to be decoded.
 #>
 
 # PARAMETERS
