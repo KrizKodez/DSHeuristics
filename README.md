@@ -49,5 +49,3 @@ This project is licensed under the terms of the GPL V3 license. Please see the i
 
 ### Version 0.1.0 (2026/08/10)
 First release, testing has been done but bugs may still exist.
-
- width="587" height="703"
